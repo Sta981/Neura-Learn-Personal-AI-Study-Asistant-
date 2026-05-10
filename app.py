@@ -109,5 +109,4 @@ Make questions suitable for university-level AI students."""
         return jsonify({"success": False, "error": "Could not parse questions. Try again."})
  
 if __name__ == "__main__":
-    app.run(debug=True)
- 
+    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
